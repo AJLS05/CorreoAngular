@@ -1,0 +1,16 @@
+<div ng-controller="DetalleCorreoController">
+  <blockquote class="bq1">
+  <h1>Detalle Correo</h1>
+  <label>De: {{correo.usuarioEnvia}}</label>
+  <br>
+  <label>Asunto: {{correo.asunto}}</label>
+  <br>
+  <label>Contenido: {{correo.contenido}}</label>
+  <br>
+  <label>Imagenes</label>
+  <br>
+  <div ng-repeat="imagen in imagenes">
+    <img ng-src="{{imagen.url}}">
+  </div>
+</blockquote>
+</div>

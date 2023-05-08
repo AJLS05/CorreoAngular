@@ -1,0 +1,29 @@
+<div ng-controller="CorreosRecibidosController">
+  <center>
+    <ul class="breadcrumb">
+      <li><a href="/correosRecibidos">Correos Recibidos</a></li>
+      <li><a href="/enviarCorreo">Enviar Correo</a></li>
+      <li><a href="/correosEnviados">Correos Enviados</a></li>
+    </ul>
+  </center>
+  <blockquote class="bq1">
+    <center>
+
+      <h1>Correos Recibidos</h1>
+      <button class="botones1 botones1h derecha" ng-click="irEnviarCorreo()">Enviar Correo</button>
+      <br>
+      <br>
+      <div ng-repeat="correo in correos">
+        <button class="botones1 botones1h" ng-click="irDetalle(correo)">
+          Asunto: {{correo.asunto}}<br>
+          De: {{correo.usuarioEnvia}}<br>
+        </button>
+      </div>
+      <br>
+      <label>Este es su ultimo correo</label>
+      <footer>
+        Esta es su bandeja de entrada, aquí estaran sus correos recibidos.
+      </footer>
+    </center>
+  </blockquote>
+</div>

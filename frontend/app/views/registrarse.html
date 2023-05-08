@@ -1,0 +1,37 @@
+<div ng-controller="RegistrarseController">
+  <blockquote class="bq1">
+    <center>
+  <h1>Registrarse</h1>
+  <form name="formRegistrarse">
+    </center>
+    <label>Correo</label>
+    <input class="derecha botones1" type="email" ng-model="correo" name="correo" required>
+    <br>
+    <div ng-show="formRegistrarse.correo.$invalid && formRegistrarse.correo.$touched">Por favor ingrese un correo valido</div>
+    <br>
+    <label>Nombre Completo</label>
+    <input class="derecha botones1" type="text" ng-model="nombreCompleto" name="nombreCompleto" required>
+    <br>
+    <div ng-show="formRegistrarse.nombreCompleto.$invalid && formRegistrarse.nombreCompleto.$touched">Ingrese un nombre</div>
+    <br>
+    <label>Contraseña</label>
+    <input class="derecha botones1" type="password" ng-minlength="8" ng-model="contrasena1" name="contrasena1" required="">
+    <br>
+    <div ng-show="formRegistrarse.contrasena1.$invalid && formRegistrarse.contrasena1.$touched">Ingrese una contrasena de minimo 8 caracteres</div>
+    <br>
+    <label>Ingrese de nuevo su contraseña</label>
+    <input class="derecha botones1" type="password" ng-minlength="8" ng-model="contrasena2" name="contrasena2" required="">
+    <br>
+    <div ng-show="formRegistrarse.contrasena2.$invalid && formRegistrarse.contrasena2.$touched">Ingrese una contrasena de minimo 8 caracteres</div>
+      <br>
+      <center>
+    <button class="botones1 botones1h derecha" ng-click="registrarse()" ng-disabled="formRegistrarse.$invalid">Registrarse</button>
+    <button class="botones1 botones1h izquierda" ng-click="irAutenticar()">Auntenticarse</button>
+</form>
+  <br>
+  <footer>
+    Llene los campos con la información requerida.
+  </footer>
+</center>
+</blockquote>
+</div>

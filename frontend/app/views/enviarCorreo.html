@@ -1,0 +1,40 @@
+<div ng-controller="EnviarCorreoController">
+  <center>
+    <ul class="breadcrumb">
+      <li><a href="/correosRecibidos" ng-click="irarecibidos()">Correos Recibidos</a></li>
+      <li><a href="/enviarCorreo" ng-click="irEnviarCorreo()">Enviar Correo</a></li>
+      <li><a>Correos Enviados</a></li>
+    </ul>
+  </center>
+  <blockquote class="bq1">
+    <center>
+      <h1>Enviar Correo</h1>
+      <form>
+        <label class="izquierda">Asunto</label>
+        <input class="botones1 derecha" type="text" ng-model="asunto">
+        <br>
+        <br>
+        <label class="izquierda">Destinatarios</label>
+        <input class="botones1 derecha" type="text" ng-model="destinatarios">
+        <br>
+        <br>
+        <label class="izquierda">Mensaje</label>
+        <textarea class="botones1 derecha" rows="3" columns="10" ng-model="contenido"></textarea>
+        <br>
+        <br>
+        <input class="botones1 botones1h izquierda" type="file" ngf-select ng-model="file" name="file">
+        <br>
+        <br>
+        <br>
+        <button class="botones1 botones1h" ng-click="subir(file)">Agregar</button>
+        <div ng-repeat= "imagen in imagenes">
+          <img ng-src="{{imagen}}">
+        </div>
+        <button class="botones1 botones1h" ng-click="enviarCorreo()">Enviar</button>
+      </form>
+      <footer>
+        Aquí puedes enviar correos a otros usuarios.
+      </footer>
+    </center>
+  </blockquote>
+</div>
